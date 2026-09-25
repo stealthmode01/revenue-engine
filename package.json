@@ -1,11 +1,16 @@
 {
   "name": "revenue-engine",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "type": "module",
   "scripts": {
-    "score": "tsx src/score.ts"
+    "score": "tsx src/score.ts",
+    "discover": "tsx src/discover.ts",
+    "accounting": "tsx src/accounting.ts",
+    "test": "tsx --test tests/*.test.ts",
+    "typecheck": "tsc --noEmit"
   },
   "devDependencies": {
+    "@types/node": "^22.18.6",
     "tsx": "^4.20.5",
     "typescript": "^5.9.2"
   }
