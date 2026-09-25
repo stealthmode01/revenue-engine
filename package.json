@@ -1,0 +1,12 @@
+{
+  "name": "revenue-engine",
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "score": "tsx src/score.ts"
+  },
+  "devDependencies": {
+    "tsx": "^4.20.5",
+    "typescript": "^5.9.2"
+  }
+}
