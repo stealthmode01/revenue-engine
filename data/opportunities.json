@@ -1,0 +1,23 @@
+[
+  {
+    "id": "daydreams-approval-risk-auditor",
+    "title": "Daydreams Approval Risk Auditor bounty",
+    "category": "software bounty",
+    "source": "https://github.com/daydreamsai/agent-bounties/issues/5",
+    "buyerEvidence": [
+      "$1000 bounty label",
+      "submission requirements published",
+      "repository accepts pull-request submissions"
+    ],
+    "expectedRevenue": 1000,
+    "expectedCost": 0,
+    "daysToPayment": 14,
+    "probabilityOfPayment": 0.08,
+    "scalability": 1,
+    "automationLeverage": 8,
+    "danielInvolvement": 2,
+    "downsideRisk": 1,
+    "status": "execution",
+    "notes": "Highly competed. Keep only as a small cash attempt, not core wealth strategy."
+  }
+]
