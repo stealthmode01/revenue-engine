@@ -1,0 +1,24 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>DE-to-Simulation Demo</title>
+<style>body{font-family:system-ui;margin:0;background:#111;color:#eee}#bar{padding:12px 16px;background:#1d2630}canvas{display:block;margin:20px auto;background:#fff;border-radius:8px}code{color:#9bd}</style></head>
+<body><div id="bar"><b>Generic Cart Simulation</b> — trajectory derived from CAD/SysML/parametric ASOT. <code>trajectory.json</code></div>
+<canvas id="c" width="800" height="600"></canvas>
+<script>
+const c=document.getElementById('c'),ctx=c.getContext('2d');
+fetch('trajectory.json').then(r=>r.json()).then(rows=>{
+ let i=0; const scale=40, ox=180, oy=500;
+ function frame(){
+   const r=rows[i%rows.length]; i++;
+   ctx.clearRect(0,0,c.width,c.height);
+   ctx.strokeStyle='#ccc'; ctx.lineWidth=1;
+   for(let k=0;k<=12;k++){ctx.beginPath();ctx.moveTo(ox+k*scale,80);ctx.lineTo(ox+k*scale,oy);ctx.stroke();}
+   for(let k=0;k<=10;k++){ctx.beginPath();ctx.moveTo(ox,oy-k*scale);ctx.lineTo(660,oy-k*scale);ctx.stroke();}
+   ctx.fillStyle='#2463eb';
+   const x=ox+r.x*scale,y=oy-r.y*scale;
+   ctx.save();ctx.translate(x,y);ctx.fillRect(-24,-14,48,28);ctx.restore();
+   ctx.fillStyle='#111';ctx.font='16px system-ui';ctx.fillText(`t=${r.t.toFixed(1)} s  speed=${r.speed.toFixed(2)} m/s`,20,30);
+   requestAnimationFrame(frame);
+ }
+ frame();
+});
+</script></body></html>

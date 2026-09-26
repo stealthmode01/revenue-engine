@@ -1,0 +1,4 @@
+name,value
+max_speed_mps,3.0
+acceleration_mps2,0.8
+turn_radius_m,1.2

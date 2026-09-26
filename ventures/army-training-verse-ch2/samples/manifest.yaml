@@ -1,0 +1,8 @@
+
+name: generic_cart
+sources:
+  cad: generic_cart.step
+  sysml: generic_cart.sysml
+  parameters: parameters.csv
+  physics: physics.yaml
+target: browser-kinematic-sandbox
